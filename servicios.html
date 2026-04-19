@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <title>Servicios THE BARBER HOUSE</title>
+    <link rel="icon" href="../logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --barber-dark: #0B0B0B;
+            --barber-dark-secondary: #171717;
+            --barber-gray-card: #222222;
+            --barber-gray-border: #343434;
+            --barber-light: #F5F5F3;
+            --barber-gray-text: #B8B8B8;
+            --barber-gold: #C9A227;
+        }
+        .text-barber { color: var(--barber-gold); }
+        .bg-barber { background-color: var(--barber-gold); }
+        .border-barber { border-color: var(--barber-gold); }
+        .bg-dark { background-color: var(--barber-dark); }
+        .bg-dark-secondary { background-color: var(--barber-dark-secondary); }
+        .bg-gray-card { background-color: var(--barber-gray-card); }
+        .border-gray { border-color: var(--barber-gray-border); }
+        .text-gray { color: var(--barber-gray-text); }
+        .text-light { color: var(--barber-light); }
+
+        html { scroll-behavior: smooth; }
+        /* Efecto para que el logo resalte en el fondo oscuro */
+        .footer-logo-clean { filter: brightness(1.2); }
+        .logo-circular { border-radius: 50%; border: 2px solid #000000; }
+        .card-shadow { box-shadow: 0 10px 30px -5px rgba(116, 84, 100, 0.1); }
+    </style>
+</head>
+<body class="bg-[#0B0B0B] font-sans text-[#F5F5F3] selection:bg-[#171717] selection:text-[#C9A227]">
+
+    <nav class="bg-[#0B0B0B]/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#343434] relative">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+
+            <a href="index.html" class="flex items-center">
+                <img src="../logo.png" alt="THE BARBER HOUSE" class="h-20 md:h-28 w-auto object-contain transition-transform hover:scale-105 logo-circular">
+            </a>
+
+            <div class="hidden md:flex space-x-10 font-bold text-xs uppercase tracking-[0.2em] text-[#B8B8B8]">
+                <a href="index.html" class="hover:text-barber transition">Inicio</a>
+                <a href="servicios.html" class="text-barber border-b-2 border-barber pb-1">Servicios</a>
+                <a href="resenas.html" class="hover:text-barber transition">Reseñas</a>
+                <a href="index.html#contacto" class="hover:text-barber transition">Contacto</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="reservas.html" class="bg-[#C9A227] text-[#0B0B0B] px-6 py-2 md:px-7 md:py-2.5 rounded-full font-bold hover:opacity-90 transition shadow-lg text-xs md:text-sm">RESERVAR</a>
+
+                <button id="mobile-menu-button" class="md:hidden text-[#C9A227] focus:outline-none p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden bg-[#0B0B0B] w-full border-t border-[#343434] shadow-xl absolute top-full left-0">
+            <div class="flex flex-col text-center font-bold text-sm uppercase tracking-widest text-[#B8B8B8]">
+                <a href="index.html" class="py-4 border-b border-[#343434] hover:text-barber hover:bg-[#171717]">Inicio</a>
+                <a href="servicios.html" class="py-4 border-b border-[#343434] text-barber bg-[#171717]">Servicios</a>
+                <a href="resenas.html" class="py-4 border-b border-[#343434] hover:text-barber hover:bg-[#171717]">Reseñas</a>
+                <a href="index.html#contacto" class="py-4 hover:text-barber hover:bg-[#171717]">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#171717] py-20 text-center border-b-4 border-[#C9A227]">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-[#F5F5F3] leading-tight">NUESTROS <span class="text-[#C9A227]">SERVICIOS</span></h1>
+        <p class="text-[#B8B8B8] mt-4 font-light text-xl px-4">La mejor experiencia en barbería con profesionales expertos.</p>
+    </header>
+
+    <section class="py-20 bg-[#171717] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#F5F5F3]">NUESTRA EXPERIENCIA PREMIUM</h2>
+                <div class="w-32 h-1 bg-[#d4af37] mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#2a2a2a] p-8 rounded-2xl border border-[#3a3a3a] text-center">
+                    <div class="text-[#d4af37] text-4xl mb-4">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Atención Personalizada</h3>
+                    <p class="text-[#B8B8B8] font-light">Cada cliente recibe un servicio adaptado a sus necesidades y preferencias únicas.</p>
+                </div>
+
+                <div class="bg-[#2a2a2a] p-8 rounded-2xl border border-[#3a3a3a] text-center">
+                    <div class="text-[#d4af37] text-4xl mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Calidad Superior</h3>
+                    <p class="text-[#B8B8B8] font-light">Utilizamos productos premium y técnicas avanzadas para resultados impecables.</p>
+                </div>
+
+                <div class="bg-[#2a2a2a] p-8 rounded-2xl border border-[#3a3a3a] text-center">
+                    <div class="text-[#d4af37] text-4xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Detalle Impecable</h3>
+                    <p class="text-[#B8B8B8] font-light">Nos enfocamos en cada pequeño detalle para garantizar la perfección.</p>
+                </div>
+
+                <div class="bg-[#2a2a2a] p-8 rounded-2xl border border-[#3a3a3a] text-center">
+                    <div class="text-[#d4af37] text-4xl mb-4">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Estilo Distintivo</h3>
+                    <p class="text-[#B8B8B8] font-light">Creamos looks únicos que reflejan tu personalidad y estilo.</p>
+                </div>
+
+                <div class="bg-[#2a2a2a] p-8 rounded-2xl border border-[#3a3a3a] text-center">
+                    <div class="text-[#d4af37] text-4xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Experiencia Premium</h3>
+                    <p class="text-[#B8B8B8] font-light">Ambiente sofisticado y servicio excepcional en cada visita.</p>
+                </div>
+
+                <div class="bg-[#2a2a2a] p-8 rounded-2xl border border-[#3a3a3a] text-center">
+                    <div class="text-[#d4af37] text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Compromiso Total</h3>
+                    <p class="text-[#B8B8B8] font-light">Garantizamos resultados excepcionales y satisfacción completa.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-xl text-[#B8B8B8] font-light max-w-3xl mx-auto">
+                    En THE BARBER HOUSE combinamos arte, técnica y pasión para ofrecerte una experiencia única.
+                    Nuestro equipo de profesionales está dedicado a realzar tu estilo con atención meticulosa al detalle
+                    y un ambiente acogedor que te hará sentir como en casa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-[#222222] p-8 rounded-[2.5rem] card-shadow border border-[#343434]">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-[#C9A227] p-3 rounded-2xl text-[#0B0B0B]"><i class="fas fa-cut text-2xl"></i></div>
+                    <h3 class="text-2xl font-black text-[#F5F5F3] uppercase tracking-tighter">CORTE DE CABELLO</h3>
+                </div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-[#343434] pb-1"><span class="text-[#B8B8B8]">Corte y peinado básico</span> <b class="text-barber">$8.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Corte premium + estilo</span> <b class="text-barber">$15.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Diseño de flequillo</span> <b class="text-barber">$10.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Recorte de puntas</span> <b class="text-barber">$5.000</b></li>
+                    <li class="flex justify-between"><span class="text-gray-300">Peinado especial</span> <b class="text-barber">$12.000</b></li>
+                </ul>
+            </div>
+
+            <div class="bg-[#222222] p-8 rounded-[2.5rem] card-shadow border border-[#343434]">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-[#C9A227] p-3 rounded-2xl text-[#0B0B0B]"><i class="fas fa-user-alt text-2xl"></i></div>
+                    <h3 class="text-2xl font-black text-[#F5F5F3] uppercase tracking-tighter">BARBA Y BIGOTE</h3>
+                </div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Recorte de barba</span> <b class="text-barber">$8.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Diseño de barba completa</span> <b class="text-barber">$12.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Bigote + perfilado</span> <b class="text-barber">$7.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Barba + cera caliente</span> <b class="text-barber">$15.000</b></li>
+                    <li class="flex justify-between"><span class="text-gray-300">Mascarilla revitalizante</span> <b class="text-barber">$5.000</b></li>
+                </ul>
+            </div>
+
+            <div class="bg-[#222222] p-8 rounded-[2.5rem] card-shadow border border-[#343434]">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-[#C9A227] p-3 rounded-2xl text-[#0B0B0B]"><i class="fas fa-spa text-2xl"></i></div>
+                    <h3 class="text-2xl font-black text-[#F5F5F3] uppercase tracking-tighter">TRATAMIENTOS FACIALES</h3>
+                </div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Limpieza facial básica</span> <b class="text-barber">$15.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Exfoliación profunda</span> <b class="text-barber">$20.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Hidratación intensiva</span> <b class="text-barber">$25.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Mascarilla antiedad</span> <b class="text-barber">$30.000</b></li>
+                    <li class="flex justify-between"><span class="text-gray-300">Tratamiento completo</span> <b class="text-barber">$35.000</b></li>
+                </ul>
+            </div>
+
+            <div class="bg-[#222222] p-8 rounded-[2.5rem] card-shadow border border-[#343434]">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-[#C9A227] p-3 rounded-2xl text-[#0B0B0B]"><i class="fas fa-crown text-2xl"></i></div>
+                    <h3 class="text-2xl font-black text-[#F5F5F3] uppercase tracking-tighter">EXPERIENCIAS PREMIUM</h3>
+                </div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Hot towel treatment</span> <b class="text-barber">$10.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Masaje facial relajante</span> <b class="text-barber">$15.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Tratamiento cuero cabelludo</span> <b class="text-barber">$12.000</b></li>
+                    <li class="flex justify-between"><span class="text-gray-300">Paquete completo VIP</span> <b class="text-barber">$45.000</b></li>
+                </ul>
+            </div>
+
+            <div class="bg-[#222222] p-8 rounded-[2.5rem] card-shadow border border-[#343434]">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-[#C9A227] p-3 rounded-2xl text-[#0B0B0B]"><i class="fas fa-flask text-2xl"></i></div>
+                    <h3 class="text-2xl font-black text-[#F5F5F3] uppercase tracking-tighter">PRODUCTOS PROFESIONALES</h3>
+                </div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Shampoo premium</span> <b class="text-barber">$8.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Acondicionador lujo</span> <b class="text-barber">$10.000</b></li>
+                    <li class="flex justify-between border-b border-[#3a3a3a] pb-1"><span class="text-gray-300">Aceite para barba</span> <b class="text-barber">$12.000</b></li>
+                    <li class="flex justify-between"><span class="text-gray-300">Cera para cabello</span> <b class="text-barber">$7.000</b></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="mt-16 text-center">
+            <a href="reservas.html" class="inline-block bg-[#171717] text-[#F5F5F3] px-12 py-5 rounded-full font-bold text-xl hover:bg-[#C9A227] transition shadow-2xl transform hover:-translate-y-1 border-2 border-[#C9A227]">¡RESERVA TU CITA AHORA!</a>
+        </div>
+    </section>
+
+    <footer class="bg-[#171717] pt-20 pb-10 text-[#F5F5F3] border-t-4 border-[#C9A227]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 items-start">
+            <div class="space-y-6">
+                <img src="../logo.png" alt="THE BARBER HOUSE" class="h-20 w-auto object-contain mx-auto md:mx-0 logo-circular">
+                <p class="text-[#B8B8B8] font-light leading-relaxed text-lg text-center md:text-left">Experimenta la excelencia en barbería con nuestros servicios premium. Contáctanos para una cita.</p>
+            </div>
+            <div class="space-y-6 text-center md:text-left">
+                <h4 class="text-[#d4af37] font-bold uppercase tracking-[0.2em] text-sm">UBÍCANOS</h4>
+                <ul class="space-y-4 text-[#B8B8B8] font-light">
+                    <li><i class="fas fa-map-marker-alt text-[#C9A227] mr-2"></i> Dirección: Av. Principal 123, Ciudad</li>
+                    <li><i class="fas fa-phone-alt text-[#C9A227] mr-2"></i> Teléfono: +56 9 4226 6284</li>
+                    <li><i class="fab fa-whatsapp text-[#C9A227] mr-2"></i> WhatsApp: +56 9 4226 6284</li>
+                    <li><i class="fab fa-instagram text-[#C9A227] mr-2"></i> Instagram: @thebarberhouse</li>
+                    <li><i class="fas fa-clock text-[#C9A227] mr-2"></i> Horario: Lunes a Sábado 10:00 - 20:00 hrs</li>
+                </ul>
+            </div>
+            <div class="space-y-6 text-center md:text-left">
+                <h4 class="text-[#d4af37] font-bold uppercase tracking-[0.2em] text-sm">SÍGUENOS</h4>
+                <div class="flex justify-center md:justify-start gap-6 text-3xl">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/56942266284" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/thebarberhouse" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-10 border-t border-white/5 text-[#B8B8B8] text-xs tracking-widest uppercase">
+            THE BARBER HOUSE © 2026 | CHILLÁN
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnMenu = document.getElementById('mobile-menu-button');
+            const menuCelular = document.getElementById('mobile-menu');
+            if(btnMenu && menuCelular) {
+                btnMenu.addEventListener('click', () => {
+                    menuCelular.classList.toggle('hidden');
+                    const icono = btnMenu.querySelector('i');
+                    if(menuCelular.classList.contains('hidden')){
+                        icono.classList.remove('fa-times');
+                        icono.classList.add('fa-bars');
+                    } else {
+                        icono.classList.remove('fa-bars');
+                        icono.classList.add('fa-times');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

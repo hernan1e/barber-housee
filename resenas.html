@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <title>Reseñas | THE BARBER HOUSE</title>
+    <link rel="icon" href="../logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --barber-dark: #0B0B0B;
+            --barber-dark-secondary: #171717;
+            --barber-gray-card: #222222;
+            --barber-gray-border: #343434;
+            --barber-light: #F5F5F3;
+            --barber-gray-text: #B8B8B8;
+            --barber-gold: #C9A227;
+        }
+        .text-barber { color: var(--barber-gold); }
+        .bg-barber { background-color: var(--barber-gold); }
+        .bg-dark { background-color: var(--barber-dark); }
+        .bg-dark-secondary { background-color: var(--barber-dark-secondary); }
+        .bg-gray-card { background-color: var(--barber-gray-card); }
+        .border-gray { border-color: var(--barber-gray-border); }
+        .text-gray { color: var(--barber-gray-text); }
+        .text-light { color: var(--barber-light); }
+        html { scroll-behavior: smooth; }
+        .footer-logo-clean { filter: brightness(1.2); }
+        .logo-circular { border-radius: 50%; border: 2px solid #000000; }
+        .step-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-[#0B0B0B] font-sans text-[#F5F5F3]">
+
+    <nav class="bg-[#0B0B0B]/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#343434] relative">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../logo.png" alt="THE BARBER HOUSE" class="h-20 md:h-24 w-auto object-contain transition-transform hover:scale-105 logo-circular">
+            </a>
+            <div class="hidden md:flex space-x-10 font-bold text-xs uppercase tracking-widest text-[#B8B8B8]">
+                <a href="index.html" class="hover:text-barber transition">Inicio</a>
+                <a href="servicios.html" class="hover:text-barber transition">Servicios</a>
+                <a href="resenas.html" class="text-barber border-b-2 border-barber pb-1">Reseñas</a>
+                <a href="#contacto" class="hover:text-barber transition">Contacto</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="reservas.html" class="bg-[#171717] text-[#F5F5F3] px-6 py-2 md:px-8 md:py-2.5 rounded-full font-bold hover:opacity-90 transition shadow-lg text-xs md:text-sm uppercase border-2 border-[#C9A227]">Reservar</a>
+                <button id="mobile-menu-button" class="md:hidden text-[#C9A227] p-2"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-[#0B0B0B] w-full border-t border-[#343434] absolute top-full left-0 shadow-xl">
+            <div class="flex flex-col text-center font-bold text-sm uppercase tracking-widest text-[#B8B8B8]">
+                <a href="index.html" class="py-4 border-b border-[#343434] hover:bg-[#171717]">Inicio</a>
+                <a href="servicios.html" class="py-4 border-b border-[#343434] hover:bg-[#171717]">Servicios</a>
+                <a href="resenas.html" class="py-4 border-b border-[#343434] text-barber bg-[#171717]">Reseñas</a>
+                <a href="#contacto" class="py-4 hover:bg-[#171717]">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#171717] py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-6xl md:text-7xl font-black text-[#F5F5F3] mb-6 uppercase tracking-tighter">RESEÑAS</h1>
+            <p class="text-xl md:text-2xl text-[#C9A227] font-light leading-relaxed">
+                Tu opinión es fundamental para nuestra mejora continua.
+            </p>
+        </div>
+    </header>
+
+    <main class="py-20 px-6 bg-[#0B0B0B]">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#F5F5F3] mb-4">TU OPINIÓN ES MUY VALIOSA PARA NOSOTROS</h2>
+                <p class="text-[#B8B8B8] text-lg max-w-3xl mx-auto">Si nos dejas tu opinión en Google, nos ayudas muchísimo a seguir creciendo y a que más personas conozcan nuestro trabajo. Tu experiencia y recomendación son fundamentales para nuestra barbería.</p>
+            </div>
+
+            <div class="flex flex-col items-center gap-8 py-10">
+                <div class="bg-[#171717] p-8 rounded-2xl border border-[#343434] max-w-2xl text-center">
+                    <h3 class="text-xl font-bold text-[#F5F5F3] mb-4">¿CÓMO DEJAR TU OPINIÓN?</h3>
+                    <p class="text-[#B8B8B8] mb-6">Es muy fácil y no te tomará más de un minuto:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-[#2a2a2a] text-[#d4af37] rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-mouse-pointer"></i>
+                            </div>
+                            <span class="text-[#B8B8B8]">Haz clic en el botón</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-[#2a2a2a] text-[#d4af37] rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-[#B8B8B8]">Selecciona 5 estrellas</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-[#2a2a2a] text-[#d4af37] rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <span class="text-[#B8B8B8]">Cuéntanos tu experiencia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-6 mt-8">
+                    <p class="text-[#F5F5F3] font-bold text-xl">¿LISTO PARA APOYARNOS?</p>
+                    <a href="https://www.google.com/search?sca_esv=d4c24c2b28f31460&sxsrf=ANbL-n4rK_PnrPeN9Fwl8IpFts3Zc9_kqw:1776460596780&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQ4bEcLtTk7rAXTGvKZ8LehKLZCUF9utNqAi-An2WYY2m58qrWMfiDjvUUvRR8CPsyXTrfuYiC82gYCI6fLtJWmVyk809d6wxq_AdRvXzQmk6feEyQ%3D%3D&q=The+Barber+House+Lanta%C3%B1o+Opiniones&sa=X&ved=2ahUKEwiqktC25_WTAxVWlpUCHUq3BfMQ0bkNegQIMxAF&biw=1920&bih=945&dpr=1#lrd=0x9668d72024f76b2d:0xf49aa49dc821e4fc,3,,,,"
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-4 bg-[#171717] text-[#F5F5F3] px-12 py-6 rounded-2xl font-bold text-xl hover:bg-[#C9A227] transition-all shadow-2xl transform hover:-translate-y-1 border-2 border-[#C9A227]">
+                        <i class="fab fa-google text-2xl"></i>
+                        OPINIONES GOOGLE
+                    </a>
+                    <p class="text-[#B8B8B8] text-sm">"Tu opinión nos ayuda a seguir mejorando día a día"</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-[#171717] pt-20 pb-10 text-[#F5F5F3] border-t-4 border-[#C9A227]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 items-start">
+            <div class="space-y-6">
+                <img src="../logo.png" alt="THE BARBER HOUSE" class="h-20 w-auto object-contain mx-auto md:mx-0 logo-circular">
+                <p class="text-[#B8B8B8] font-light leading-relaxed text-lg text-center md:text-left">Experimenta la excelencia en barbería con nuestros servicios premium. Contáctanos para una cita.</p>
+            </div>
+            <div class="space-y-6 text-center md:text-left">
+                <h4 class="text-[#d4af37] font-bold uppercase tracking-[0.2em] text-sm">UBÍCANOS</h4>
+                <ul class="space-y-4 text-[#B8B8B8] font-light">
+                    <li><i class="fas fa-map-marker-alt text-[#C9A227] mr-2"></i> Dirección: Av. Principal 123, Ciudad</li>
+                    <li><i class="fas fa-phone-alt text-[#C9A227] mr-2"></i> Teléfono: +56 9 4226 6284</li>
+                    <li><i class="fab fa-whatsapp text-[#C9A227] mr-2"></i> WhatsApp: +56 9 4226 6284</li>
+                    <li><i class="fab fa-instagram text-[#C9A227] mr-2"></i> Instagram: @thebarberhouse</li>
+                    <li><i class="fas fa-clock text-[#C9A227] mr-2"></i> Horario: Lunes a Sábado 10:00 - 20:00 hrs</li>
+                </ul>
+            </div>
+            <div class="space-y-6 text-center md:text-left">
+                <h4 class="text-[#d4af37] font-bold uppercase tracking-[0.2em] text-sm">SÍGUENOS</h4>
+                <div class="flex justify-center md:justify-start gap-6 text-3xl">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/56942266284" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/thebarberhouse" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-10 border-t border-white/5 text-[#B8B8B8] text-xs tracking-widest uppercase">
+            THE BARBER HOUSE © 2026 | CHILLÁN
+        </div>
+    </footer>
+
+    <script>
+        const btnMenu = document.getElementById('mobile-menu-button');
+        const menuCelular = document.getElementById('mobile-menu');
+        btnMenu.addEventListener('click', () => {
+            menuCelular.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

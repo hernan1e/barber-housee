@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <title>THE BARBER HOUSE | Barbería Premium</title>
+    <link rel="icon" href="../logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --barber-dark: #0B0B0B;
+            --barber-dark-secondary: #171717;
+            --barber-gray-card: #222222;
+            --barber-gray-border: #343434;
+            --barber-light: #F5F5F3;
+            --barber-gray-text: #B8B8B8;
+            --barber-gold: #C9A227;
+        }
+        .text-barber { color: var(--barber-gold); }
+        .bg-barber { background-color: var(--barber-gold); }
+        .bg-dark { background-color: var(--barber-dark); }
+        .bg-dark-secondary { background-color: var(--barber-dark-secondary); }
+        .bg-gray-card { background-color: var(--barber-gray-card); }
+        .border-gray { border-color: var(--barber-gray-border); }
+        .text-gray { color: var(--barber-gray-text); }
+        .text-light { color: var(--barber-light); }
+
+        html { scroll-behavior: smooth; }
+        .hero-shadow { text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .footer-logo-clean { filter: brightness(1.2); }
+        .logo-circular { border-radius: 50%; border: 2px solid #000000; }
+    </style>
+</head>
+<body class="bg-[#0B0B0B] font-sans text-[#F5F5F3] selection:bg-[#171717] selection:text-[#C9A227]">
+
+    <nav class="bg-[#0B0B0B]/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-[#343434] relative">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../logo.png" alt="THE BARBER HOUSE" class="h-20 md:h-24 w-auto object-contain transition-transform hover:scale-105 logo-circular">
+            </a>
+            <div class="hidden md:flex space-x-10 font-bold text-xs uppercase tracking-widest text-[#B8B8B8]">
+                <a href="index.html" class="text-barber border-b-2 border-barber pb-1">Inicio</a>
+                <a href="servicios.html" class="hover:text-barber transition">Servicios</a>
+                <a href="resenas.html" class="hover:text-barber transition">Reseñas</a>
+                <a href="#contacto" class="hover:text-barber transition">Contacto</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="reservas.html" class="bg-[#171717] text-[#F5F5F3] px-6 py-2 md:px-8 md:py-2.5 rounded-full font-bold hover:opacity-90 transition shadow-lg text-xs md:text-sm uppercase border-2 border-[#C9A227]">RESERVAR</a>
+                <button id="mobile-menu-button" class="md:hidden text-[#C9A227] focus:outline-none p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-[#0B0B0B] w-full border-t border-[#343434] shadow-xl absolute top-full left-0">
+            <div class="flex flex-col text-center font-bold text-sm uppercase tracking-widest text-[#B8B8B8]">
+                <a href="index.html" class="py-4 border-b border-[#343434] text-barber bg-[#171717]">Inicio</a>
+                <a href="servicios.html" class="py-4 border-b border-[#343434] hover:bg-[#171717]">Servicios</a>
+                <a href="resenas.html" class="py-4 border-b border-[#343434] hover:bg-[#171717]">Reseñas</a>
+                <a href="#contacto" class="py-4 hover:bg-[#171717]">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[70vh] md:h-[78vh] flex items-center justify-center bg-dark overflow-hidden">
+        <img src="../salon.jpg" class="absolute inset-0 w-full h-full object-cover object-center" alt="Barbería THE BARBER HOUSE">
+        <div class="absolute inset-0 bg-white opacity-10"></div>
+        <div class="relative z-20 text-center px-4 text-white">
+            <div class="mb-6 flex justify-center">
+                <img src="../logo.png" alt="THE BARBER HOUSE" class="h-24 md:h-32 w-auto object-contain logo-circular">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 hero-shadow leading-tight">THE BARBER <span class="text-[#d4af37]">HOUSE</span></h1>
+                        <p class="text-xl md:text-2xl mb-10 font-light italic hero-shadow">Experiencia premium en barbería</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="servicios.html" class="bg-[#1a1a1a] text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-xl transform hover:-translate-y-1 border-2 border-[#d4af37]">VER SERVICIOS</a>
+                <a href="reservas.html" class="bg-[#d4af37] text-[#1a1a1a] px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-xl transform hover:-translate-y-1">AGENDAR CITA</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 text-center max-w-4xl mx-auto bg-[#0B0B0B]">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">BIENVENIDO A THE BARBER HOUSE</h2>
+        <div class="w-32 h-1 bg-[#d4af37] mx-auto mb-8 rounded-full"></div>
+        <p class="text-xl md:text-2xl text-[#B8B8B8] font-light leading-relaxed max-w-3xl mx-auto">
+            Experimenta la excelencia en barbería con nuestros servicios premium. Somos el refugio perfecto para hombres que buscan estilo, calidad y confort excepcional.
+        </p>
+    </section>
+
+    <section class="py-20 bg-[#171717] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h3 class="text-sm font-bold text-barber uppercase tracking-[0.3em] mb-2">NUESTROS SERVICIOS</h3>
+                    <h2 class="text-4xl font-black text-white">EXPERIENCIAS PREMIUM</h2>
+                </div>
+                <a href="servicios.html" class="text-barber font-bold border-b-2 border-barber pb-1 hidden md:block">Ver todos los servicios</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group bg-[#222222] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-[#343434]">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="../cabello premium.avif" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Corte de Cabello Premium">
+                        <div class="absolute top-4 right-4 bg-[#171717] text-[#C9A227] p-3 rounded-full">
+                            <i class="fas fa-cut text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3 text-[#F5F5F3]">Corte de Cabello Premium</h4>
+                        <p class="text-[#B8B8B8] mb-6 font-light">Estilo personalizado con técnicas avanzadas y productos de primera calidad.</p>
+                        <span class="text-barber font-black text-xl">Desde $15.000</span>
+                    </div>
+                </div>
+                <div class="group bg-[#2a2a2a] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-[#3a3a3a]">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="../barb.avif" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Barba y Bigote">
+                        <div class="absolute top-4 right-4 bg-[#171717] text-[#C9A227] p-3 rounded-full">
+                            <i class="fas fa-user-alt text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3 text-[#F5F5F3]">Barba y Bigote</h4>
+                        <p class="text-[#B8B8B8] mb-6 font-light">Diseño, recorte y cuidado completo para una barba impecable.</p>
+                        <span class="text-barber font-black text-xl">Desde $12.000</span>
+                    </div>
+                </div>
+                <div class="group bg-[#2a2a2a] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all border border-[#3a3a3a]">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="../facial.avif" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Tratamientos Faciales">
+                        <div class="absolute top-4 right-4 bg-[#171717] text-[#C9A227] p-3 rounded-full">
+                            <i class="fas fa-spa text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-3 text-[#F5F5F3]">Tratamientos Faciales</h4>
+                        <p class="text-[#B8B8B8] mb-6 font-light">Hidratación, exfoliación y cuidados premium para una piel saludable.</p>
+                        <span class="text-barber font-black text-xl">Desde $25.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer id="contacto" class="bg-[#171717
+    ] pt-20 pb-10 text-[#F5F5F3] border-t-4 border-[#C9A227] mt-2">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 items-start">
+            <div class="space-y-6">
+                <img src="../logo.png" alt="THE BARBER HOUSE" class="h-20 w-auto object-contain mx-auto md:mx-0 logo-circular">
+                <p class="text-[#B8B8B8] font-light leading-relaxed text-lg text-center md:text-left">Experimenta la excelencia en barbería con nuestros servicios premium. Contáctanos para una cita.</p>
+            </div>
+            <div class="space-y-6 text-center md:text-left">
+                <h4 class="text-[#d4af37] font-bold uppercase tracking-[0.2em] text-sm">UBÍCANOS</h4>
+                <ul class="space-y-4 text-[#B8B8B8] font-light">
+                    <li><i class="fas fa-map-marker-alt text-[#d4af37] mr-2"></i> Dirección: Av. Principal 123, Ciudad</li>
+                    <li><i class="fas fa-phone-alt text-[#d4af37] mr-2"></i> Teléfono: +56 9 4226 6284</li>
+                    <li><i class="fab fa-whatsapp text-[#d4af37] mr-2"></i> WhatsApp: +56 9 4226 6284</li>
+                    <li><i class="fab fa-instagram text-[#d4af37] mr-2"></i> Instagram: @thebarberhouse</li>
+                    <li><i class="fas fa-clock text-[#d4af37] mr-2"></i> Horario: Lunes a Sábado 10:00 - 20:00 hrs</li>
+                </ul>
+            </div>
+            <div class="space-y-6 text-center md:text-left">
+                <h4 class="text-[#d4af37] font-bold uppercase tracking-[0.2em] text-sm">SÍGUENOS</h4>
+                <div class="flex justify-center md:justify-start gap-6 text-3xl">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/56942266284" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/thebarberhouse" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4af37] transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-10 border-t border-white/5 text-[#B8B8B8] text-xs tracking-widest uppercase">
+            THE BARBER HOUSE © 2026 | CHILLÁN
+        </div>
+    </footer>
+
+    <script>
+        const btnMenu = document.getElementById('mobile-menu-button');
+        const menuCelular = document.getElementById('mobile-menu');
+        btnMenu.addEventListener('click', () => {
+            menuCelular.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
